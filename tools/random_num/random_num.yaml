@@ -41,9 +41,9 @@ parameters:
       en_US: digits
       zh_Hans: 小数位数
     human_description:
-      en_US: Digits of the random number. When 0, the number will be an integer.
+      en_US: Digits of the random number. When 0, an integer will be generated.
       zh_Hans: 小数位数，如果位数为0，则生成整数
-    llm_description: Digits of the random number. If 0, the number will be an integer.
+    llm_description: Digits of the random number. If 0, an integer will be generated.
     form: llm
 extra:
   python:
