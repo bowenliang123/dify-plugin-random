@@ -1,0 +1,17 @@
+identity:
+  author: bowenliang123
+  name: random
+  label:
+    en_US: random
+    zh_Hans: random
+    pt_BR: random
+  description:
+    en_US: Generate random number or string.
+    zh_Hans: Generate random number or string.
+    pt_BR: Generate random number or string.
+  icon: icon.svg
+tools:
+  - tools/random_num/random_num.yaml
+extra:
+  python:
+    source: provider/random.py
