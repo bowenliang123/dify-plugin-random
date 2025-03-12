@@ -12,13 +12,16 @@ class RandomNumTool(Tool):
         upper_bound = tool_parameters.get("upper_bound", 1024)
         digits = int(tool_parameters.get("digits", 0))
 
-        if float(lower_bound) > float(upper_bound):
+        lower_num = float(lower_bound)
+        upper_num = float(upper_bound)
+        if lower_num > upper_num:
             raise ValueError("Invalid range, the the lower bound should be less than or equal to the upper bound")
 
         if digits < 0:
-            raise ValueError("Invalid digits")
+            raise ValueError(f"Invalid digits {digits}")
         elif digits == 0:
-            random_num = random.randint(int(lower_bound), int(upper_bound))
+            random_num = random.randint(int(lower_num), int(upper_num))
         else:
-            random_num = round(random.uniform(float(lower_bound), float(upper_bound)), digits)
+            random_num = round(random.uniform(lower_num, upper_num), digits)
+
         yield self.create_text_message(str(random_num))
