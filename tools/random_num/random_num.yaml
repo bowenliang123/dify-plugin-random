@@ -15,7 +15,7 @@ parameters:
     default: 0
     label:
       en_US: Lower bound
-      zh_Hans: 范围上限
+      zh_Hans: 范围下限
     human_description:
       en_US: Lower bound of the random number.
       zh_Hans: 范围下限
