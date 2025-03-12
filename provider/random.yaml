@@ -7,7 +7,7 @@ identity:
   description:
     en_US: Generate random number or string.
     zh_Hans: Generate random number or string.
-  icon: icon.svg
+  icon: icon.png
 tools:
   - tools/random_num/random_num.yaml
   - tools/random_uuid/random_uuid.yaml

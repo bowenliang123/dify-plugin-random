@@ -8,7 +8,7 @@ label:
 description:
   en_US: Generate random number or string.
   zh_Hans: Generate random number or string.
-icon: icon.svg
+icon: icon.png
 resource:
   memory: 268435456
   permission:
