@@ -15,7 +15,8 @@ class RandomNumTool(Tool):
         lower_num = float(lower_bound)
         upper_num = float(upper_bound)
         if lower_num > upper_num:
-            raise ValueError("Invalid range, the the lower bound should be less than or equal to the upper bound")
+            raise ValueError(f"Invalid range [{lower_bound}, {upper_bound}],"
+                             f" the lower bound should be less than or equal to the upper bound")
 
         if digits < 0:
             raise ValueError(f"Invalid digits {digits}")
