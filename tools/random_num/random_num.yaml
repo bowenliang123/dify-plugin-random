@@ -2,8 +2,8 @@ identity:
   name: random_num
   author: bowenliang123
   label:
-    en_US: random_num
-    zh_Hans: random_num
+    en_US: Random number
+    zh_Hans: 生成随机数
 description:
   human:
     en_US: Generate a random number.
@@ -32,6 +32,18 @@ parameters:
       en_US: Lower bound of the random number.
       zh_Hans: 范围下限
     llm_description: Lower bound of the random number.
+    form: llm
+  - name: digits
+    type: number
+    required: false
+    default: 0
+    label:
+      en_US: digits
+      zh_Hans: 小数位数
+    human_description:
+      en_US: Digits of the random number. When 0, the number will be an integer.
+      zh_Hans: 小数位数，如果位数为0，则生成整数
+    llm_description: Digits of the random number. If 0, the number will be an integer.
     form: llm
 extra:
   python:

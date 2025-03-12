@@ -2,16 +2,15 @@ identity:
   author: bowenliang123
   name: random
   label:
-    en_US: random
-    zh_Hans: random
-    pt_BR: random
+    en_US: Random Generator
+    zh_Hans: 随机生成器
   description:
     en_US: Generate random number or string.
     zh_Hans: Generate random number or string.
-    pt_BR: Generate random number or string.
   icon: icon.svg
 tools:
   - tools/random_num/random_num.yaml
+  - tools/random_uuid/random_uuid.yaml
 extra:
   python:
     source: provider/random.py
