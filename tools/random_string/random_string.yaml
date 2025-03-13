@@ -6,8 +6,8 @@ identity:
     zh_Hans: 生成随机字符串
 description:
   human:
-    en_US: Generate a random string.
-  llm: Generate a random string.
+    en_US: Generate a random string with given length from alphabets and numbers.
+  llm: Generate a random string with given length from alphabets and numbers.
 parameters:
   - name: length
     type: number
