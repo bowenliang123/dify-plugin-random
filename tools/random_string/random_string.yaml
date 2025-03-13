@@ -1,0 +1,26 @@
+identity:
+  name: random_string
+  author: bowenliang123
+  label:
+    en_US: Random String
+    zh_Hans: 生成随机字符串
+description:
+  human:
+    en_US: Generate a random string.
+  llm: Generate a random string.
+parameters:
+  - name: length
+    type: number
+    required: true
+    default: 0
+    label:
+      en_US: String length
+      zh_Hans: 字符串长度
+    human_description:
+      en_US: String length
+      zh_Hans: 字符串长度
+    llm_description: String length
+    form: llm
+extra:
+  python:
+    source: tools/random_string/random_string.py

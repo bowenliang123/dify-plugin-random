@@ -11,6 +11,7 @@ identity:
 tools:
   - tools/random_num/random_num.yaml
   - tools/random_uuid/random_uuid.yaml
+  - tools/random_string/random_string.yaml
 extra:
   python:
     source: provider/random.py
