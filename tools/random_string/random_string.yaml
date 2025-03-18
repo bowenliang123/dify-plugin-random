@@ -21,6 +21,77 @@ parameters:
       zh_Hans: 字符串长度
     llm_description: String length
     form: llm
+  - name: include_alphabets
+    type: select
+    required: true
+    default: "upper_and_lower"
+    options:
+      - value: "upper_and_lower"
+        label:
+          en_US: "Upper and lower case"
+          zh_Hans: 大写和小写字母
+      - value: "uppercase_only"
+        label:
+          en_US: "Uppercase only"
+          zh_Hans: 仅大写字母
+      - value: "lowercase_only"
+        label:
+          en_US: "Lowercase only"
+          zh_Hans: 仅小写字母
+      - value: "not_included"
+        label:
+          en_US: "Not included"
+          zh_Hans: 不包含
+    label:
+      en_US: Included alphabets
+      zh_Hans: 包含的英文字母
+    human_description:
+      en_US: Include uppercase or lowercase alphabets, default to include both
+      zh_Hans: 包含大写或小写字母, 默认为包含全部
+    llm_description: Include uppercase or lowercase alphabets
+    form: form
+  - name: include_numbers
+    type: select
+    required: true
+    default: "true"
+    options:
+      - value: "true"
+        label:
+          en_US: "Yes"
+          zh_Hans: 是
+      - value: "false"
+        label:
+          en_US: "No"
+          zh_Hans: 否
+    label:
+      en_US: Whether include numbers
+      zh_Hans: 是否包含数字
+    human_description:
+      en_US: Whether include numbers, default to Yes
+      zh_Hans: 是否包含数字, 默认为是
+    llm_description: Whether include numbers
+    form: form
+  - name: include_punctuation
+    type: select
+    required: true
+    default: "false"
+    options:
+      - value: "true"
+        label:
+          en_US: "Yes"
+          zh_Hans: 是
+      - value: "false"
+        label:
+          en_US: "No"
+          zh_Hans: 否
+    label:
+      en_US: Include punctuation
+      zh_Hans: 是否包含特殊字符
+    human_description:
+      en_US: Whether include punctuation,default to false, punctuation chars are !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+      zh_Hans: 是否包含特殊字符，默认为否，特殊字符为 !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+    llm_description: Whether include numbers
+    form: form
 extra:
   python:
     source: tools/random_string/random_string.py
