@@ -18,7 +18,9 @@ class RandomPrimeTool(Tool):
                              f" the lower bound should be less than or equal to the upper bound")
 
         try:
-            random_prime = randprime(lower_num, upper_num)
+            # add 1 to the upper bound,
+            # as `randprime` generates prime number from [a, b) range
+            random_prime = randprime(lower_num, upper_num + 1)
         except ValueError:
             random_prime = None
 
