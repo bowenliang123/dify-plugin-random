@@ -5,8 +5,8 @@ identity:
     en_US: Random Generator
     zh_Hans: 随机生成器
   description:
-    en_US: Generate random number or string.
-    zh_Hans: Generate random number or string.
+    en_US: Generate random number, string, UUID, prime number and etc.
+    zh_Hans: 生成随机数、字符串、UUID、质数等。
   icon: icon.png
 tools:
   - tools/random_num/random_num.yaml
