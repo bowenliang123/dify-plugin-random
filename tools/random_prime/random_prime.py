@@ -14,7 +14,7 @@ class RandomPrimeTool(Tool):
         if not lower_bound:
             raise ValueError("Invalid input lower_bound")
         if not upper_bound:
-            raise ValueError("Invalid input lower_bound")
+            raise ValueError("Invalid input upper_bound")
 
         lower_num = int(lower_bound)
         upper_num = int(upper_bound)
