@@ -34,7 +34,7 @@ A Dify plugin to generate random number, string, UUID, prime number and etc.
 
 ### Random UUID:
 
-- Generate a random UUID string of UUID v4.
+- Generate a random string of UUID v4.
 
 <img src="./_assets/img3.png" width="400px" >
 
