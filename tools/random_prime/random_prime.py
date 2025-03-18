@@ -8,8 +8,13 @@ from sympy import randprime
 
 class RandomPrimeTool(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
-        lower_bound = tool_parameters.get("lower_bound", 0)
-        upper_bound = tool_parameters.get("upper_bound", 1024)
+        lower_bound = tool_parameters.get("lower_bound")
+        upper_bound = tool_parameters.get("upper_bound")
+
+        if not lower_bound:
+            raise ValueError("Invalid input lower_bound")
+        if not upper_bound:
+            raise ValueError("Invalid input lower_bound")
 
         lower_num = int(lower_bound)
         upper_num = int(upper_bound)
