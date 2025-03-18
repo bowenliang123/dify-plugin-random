@@ -12,11 +12,16 @@ class RandomNumTool(Tool):
         upper_bound = tool_parameters.get("upper_bound", 1024)
         digits = int(tool_parameters.get("digits", 0))
 
+        if not lower_bound:
+            raise ValueError("Invalid input lower_bound")
+        if not upper_bound:
+            raise ValueError("Invalid input upper_bound")
+
         lower_num = float(lower_bound)
         upper_num = float(upper_bound)
         if lower_num > upper_num:
             raise ValueError(f"Invalid range [{lower_bound}, {upper_bound}],"
-                             f" the lower bound should be less than or equal to the upper bound")
+                             f" the lower bound should be no greater than the upper bound")
 
         if digits < 0:
             raise ValueError(f"Invalid digits {digits}")
