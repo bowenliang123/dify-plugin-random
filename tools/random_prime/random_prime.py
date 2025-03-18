@@ -22,12 +22,13 @@ class RandomPrimeTool(Tool):
             raise ValueError(f"Invalid range [{lower_bound}, {upper_bound}],"
                              f" the lower bound should be less than or equal to the upper bound")
 
+        random_prime = None
         try:
             # add 1 to the upper bound,
             # as `randprime` generates prime number from [a, b) range
             random_prime = randprime(lower_num, upper_num + 1)
         except ValueError:
-            random_prime = None
+            pass
 
         # NaN represents no prime number found according to IEEE_754 standard
         random_prime_str = str(random_prime) if random_prime else 'NaN'
