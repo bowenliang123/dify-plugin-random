@@ -1,24 +1,30 @@
-## random
+# Random - Generator for random number and string
 
 **Author:** [bowenliang123](https://github.com/bowenliang123)
 
 **Github Repo:** https://github.com/bowenliang123/random
 
-### Description
+## Description
 
-A Dify plugin to generate random number or string.
+A Dify plugin to generate random number, string, UUID, prime number and etc.
 
 
-- `random_string` Tool: Generate a random string with given length from alphabets and numbers.
+## Tools
 
-eg. `TSUWUBoOIu4bZja7mdjTkKteaKVrhz`
+### Random String:
+  - Generate a random string with given length from alphabets and numbers.
+  - Output: eg. `TSUWUBoOIu4bZja7mdjTkKteaKVrhz` in length 30.
 
-- `random_num` Tool: Generate a random number in given range. If the digits is set to 0, an integer will be generated.
+### Random Number:
+  - Generate a random number in given range [ lower_bound, upper bound ] .
+  - Output: If the digits is set to 0, an integer will be generated.
 
-<img src="./_assets/img1.png" width="400px" >
-<img src="./_assets/img2.png" width="400px" >
+  <img src="./_assets/img1.png" width="400px" >
+  <img src="./_assets/img2.png" width="400px" >
 
-- `random_uuid` Tool: Generate a random UUID string of UUID v4.
+#### Random UUID:
+  - Generate a random UUID string of UUID v4.
 
 <img src="./_assets/img3.png" width="400px" >
+
 
