@@ -7,6 +7,7 @@ identity:
 description:
   human:
     en_US: Generate a random number.
+    zh_Hans: 生成随机数
   llm: Generate a random number.
 parameters:
   - name: lower_bound
@@ -14,11 +15,11 @@ parameters:
     required: true
     default: 0
     label:
-      en_US: Lower bound
-      zh_Hans: 范围下限
+      en_US: Included lower bound of the random number, accepting integer or float.
+      zh_Hans: 包括的数值下限，可填写整数或小数
     human_description:
       en_US: Lower bound of the random number.
-      zh_Hans: 范围下限
+      zh_Hans: 数值下限
     llm_description: Lower bound of the random number.
     form: llm
   - name: upper_bound
@@ -29,8 +30,8 @@ parameters:
       en_US: Upper bound
       zh_Hans: 范围上限
     human_description:
-      en_US: Upper bound of the random number.
-      zh_Hans: 范围上限
+      en_US: Included upper bound of the random number, accepting integer or float.
+      zh_Hans: 包括的数值上限，可填写整数或小数
     llm_description: Upper bound of the random number.
     form: llm
   - name: digits
@@ -41,9 +42,9 @@ parameters:
       en_US: digits
       zh_Hans: 小数位数
     human_description:
-      en_US: Digits of the random number. When 0, an integer will be generated.
-      zh_Hans: 小数位数，如果位数为0，则生成整数
-    llm_description: Digits of the random number. If 0, an integer will be generated.
+      en_US: Digits of the random number, default to 0. When 0, it generates an integer.
+      zh_Hans: 小数位数，默认为0。如果位数为0，则生成整数。
+    llm_description: Digits of the random number, default to 0. When 0, it generates an integer.
     form: llm
 extra:
   python:

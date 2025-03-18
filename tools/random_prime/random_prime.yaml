@@ -15,10 +15,10 @@ parameters:
     default: 0
     label:
       en_US: Lower bound
-      zh_Hans: 范围下限
+      zh_Hans: 数值下限
     human_description:
-      en_US: Lower bound of the random number.
-      zh_Hans: 范围下限
+      en_US: Included lower bound of the random number, accepting integer or float.
+      zh_Hans: 包括的数值下限，可填写整数或小数
     llm_description: Lower bound of the random number.
     form: llm
   - name: upper_bound
@@ -29,8 +29,8 @@ parameters:
       en_US: Upper bound
       zh_Hans: 范围上限
     human_description:
-      en_US: Upper bound of the random number.
-      zh_Hans: 范围上限
+      en_US: Included upper bound of the random number, accepting integer or float.
+      zh_Hans: 包括的数值上限，可填写整数或小数
     llm_description: Upper bound of the random number.
     form: llm
 extra:
