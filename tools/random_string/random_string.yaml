@@ -103,6 +103,7 @@ parameters:
       en_US: Default to 1
       zh_Hans: 默认为1
     llm_description: Number of random strings to generate, default to 1
+    form: form
 extra:
   python:
     source: tools/random_string/random_string.py
