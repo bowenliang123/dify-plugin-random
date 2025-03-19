@@ -104,6 +104,19 @@ parameters:
       zh_Hans: 默认为1
     llm_description: Number of random strings to generate, default to 1
     form: form
+  - name: separator
+    type: string
+    required: false
+    default: ","
+    placeholder: ","
+    label:
+      en_US: Separator for multiple generated strings
+      zh_Hans: 生成的多个字符串的分隔符
+    human_description:
+      en_US: Default to "," comma
+      zh_Hans: 默认为 "," 小逗号
+    llm_description: Separator for multiple generated strings, default to ","
+    form: form
 extra:
   python:
     source: tools/random_string/random_string.py

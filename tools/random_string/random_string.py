@@ -18,7 +18,7 @@ class RandomStringTool(Tool):
         include_numbers = tool_parameters.get("include_numbers", "true")
         include_punctuation = tool_parameters.get("include_punctuation", "false")
         string_count = int(tool_parameters.get("string_count", 1))
-        separator = tool_parameters.get("separator", ", ")
+        separator = tool_parameters.get("separator", ",")
 
         # Determine all available characters
         chars: str = (self.append_alphabets(include_alphabets)
@@ -26,6 +26,10 @@ class RandomStringTool(Tool):
                       + self.append_punctuation(include_punctuation))
         if not chars:
             raise ValueError("No available character included.")
+
+        if include_punctuation == "true" and separator == ",":
+            raise ValueError("The seperator cannot be a comma when punctuation characters are included"
+                             " as comma is a punctuation character.")
 
         # Generate random string(s)
         result_str = separator.join(self.generate_random_string(chars, length) for _ in range(string_count))
