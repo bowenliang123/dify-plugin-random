@@ -46,6 +46,18 @@ parameters:
       zh_Hans: 小数位数，默认为0。如果位数为0，则生成整数。
     llm_description: Digits of the random number, default to 0. When 0, it generates an integer.
     form: llm
+  - name: num_count
+    type: number
+    required: false
+    default: 1
+    label:
+      en_US: Number of random numbers
+      zh_Hans: 生成的个数
+    human_description:
+      en_US: Default to 1
+      zh_Hans: 默认为1
+    llm_description: Number of random numbers to generate, default to 1
+    form: llm
 extra:
   python:
     source: tools/random_num/random_num.py
