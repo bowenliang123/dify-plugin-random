@@ -52,7 +52,7 @@ parameters:
     default: 1
     label:
       en_US: Number of random numbers
-      zh_Hans: 生成的个数
+      zh_Hans: 生成的随机数个数
     human_description:
       en_US: Default to 1. All generated numbers will be separated by "," delimiter.
       zh_Hans: 默认为1。所有生成的随机数会以","分隔符分隔。

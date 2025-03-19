@@ -98,12 +98,12 @@ parameters:
     default: "1"
     label:
       en_US: Number of random strings
-      zh_Hans: 生成的个数
+      zh_Hans: 生成的字符串个数
     human_description:
       en_US: Default to 1
       zh_Hans: 默认为1
     llm_description: Number of random strings to generate, default to 1
-    form: form
+    form: llm
   - name: separator
     type: string
     required: false
