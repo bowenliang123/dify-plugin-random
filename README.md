@@ -23,15 +23,16 @@ A Dify plugin to generate random number, string, UUID, prime number and etc.
 
 ### Random Number:
 
-- Generate a random number in given range [ lower_bound, upper bound ] .
+- Generate a random number in the given range of [ lower_bound, upper bound ] .
 - Output: If the digits is set to 0, an integer will be generated.
 
   <img src="./_assets/img1.png" width="400px" >
+  
   <img src="./_assets/img2.png" width="400px" >
 
 ### Random Prime Number:
 
-- Generate a random prime number in given range [ lower_bound, upper bound ] .
+- Generate a random prime number in the given range of [ lower_bound, upper bound ] .
 - Output: A prime number, or `NaN` if no prime number is found.
 
 ### Random UUID:
