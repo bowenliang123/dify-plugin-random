@@ -19,11 +19,15 @@ A Dify plugin to generate random number, string, UUID, prime number and etc.
       or [lowercase](https://docs.python.org/3/library/string.html#string.ascii_lowercase) alphabets.
     - `include_numbers`: Whether to include [numbers](https://docs.python.org/3/library/string.html#string.digits)
     - `include_punctuation`: Whether to include punctuation characters from `!"#$%&'()*+,-./:;<=>?@[\]^_``{|}~`
+    - `string_count`: Number of random strings to generate
 - Output: eg. `TSUWUBoOIu4bZja7mdjTkKteaKVrhz` for requested length of 30.
 
 ### Random Number:
 
 - Generate a random number in the given range of [ lower_bound, upper bound ] .
+- Input:
+    - `lower_bound` and `upper_bound`: The range of random number to generate. Either integer or float is accepted.
+    - `num_count`: Number of random numbers to generate
 - Output: If the digits is set to 0, an integer will be generated.
 
   <img src="./_assets/img1.png" width="400px" >
@@ -33,6 +37,9 @@ A Dify plugin to generate random number, string, UUID, prime number and etc.
 ### Random Prime Number:
 
 - Generate a random prime number in the given range of [ lower_bound, upper bound ] .
+- Input:
+    - `lower_bound` and `upper_bound`: The range of random prime number to generate. Either integer or float is
+      accepted.
 - Output: A prime number, or `NaN` if no prime number is found.
 
 ### Random UUID:
