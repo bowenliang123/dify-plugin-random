@@ -28,7 +28,7 @@ class RandomStringTool(Tool):
             raise ValueError("No available character included.")
 
         if include_punctuation == "true" and separator == ",":
-            raise ValueError("The seperator cannot be a comma when punctuation characters are included"
+            raise ValueError("The seperator cannot be a comma \",\" when punctuation characters are included"
                              " as comma is a punctuation character.")
 
         # Generate random string(s)
