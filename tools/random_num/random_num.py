@@ -12,7 +12,7 @@ class RandomNumTool(Tool):
         upper_bound = tool_parameters.get("upper_bound", 100)
         digits = int(tool_parameters.get("digits", 0))
         num_count = int(tool_parameters.get("num_count", 1))
-        separator = tool_parameters.get("separator", ", ")
+        separator = tool_parameters.get("separator", ",")
 
         if num_count == 0:
             yield self.create_text_message("")
