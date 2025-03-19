@@ -17,7 +17,7 @@ class RandomStringTool(Tool):
         include_alphabets = tool_parameters.get("include_alphabets", "upper_and_lower")
         include_numbers = tool_parameters.get("include_numbers", "true")
         include_punctuation = tool_parameters.get("include_punctuation", "false")
-        num_count = int(tool_parameters.get("num_count", 1))
+        string_count = int(tool_parameters.get("string_count", 1))
         separator = tool_parameters.get("separator", ", ")
 
         # Determine all available characters
@@ -28,7 +28,7 @@ class RandomStringTool(Tool):
             raise ValueError("No available character included.")
 
         # Generate random string(s)
-        result_str = separator.join(self.generate_random_string(chars, length) for _ in range(num_count))
+        result_str = separator.join(self.generate_random_string(chars, length) for _ in range(string_count))
 
         yield self.create_text_message(result_str)
 
