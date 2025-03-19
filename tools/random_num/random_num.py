@@ -25,8 +25,8 @@ class RandomNumTool(Tool):
         if not upper_bound:
             raise ValueError("Invalid input upper_bound")
 
-        lower_num = float(lower_bound)
-        upper_num = float(upper_bound)
+        lower_num: float | int = float(lower_bound) if digits == 0 else int(lower_bound)
+        upper_num: float | int = float(upper_bound) if digits == 0 else int(upper_bound)
         if lower_num > upper_num:
             raise ValueError(f"Invalid range [{lower_bound}, {upper_bound}],"
                              f" the lower bound should be no greater than the upper bound")
@@ -35,16 +35,9 @@ class RandomNumTool(Tool):
             raise ValueError(f"Invalid digits {digits}")
 
         # Generate random number(s)
-        result_str = separator.join(
-            self.generate_random_number(digits, lower_num, upper_num) for _ in range(num_count))
+        gen_random_int = lambda lower, upper: random.randint(lower, upper)
+        gen_random_float = lambda lower, upper: round(random.uniform(lower, upper), digits)
+        gen_func = gen_random_int if digits == 0 else gen_random_float
+        result_str = separator.join(str(gen_func(lower_num, upper_num)) for _ in range(num_count))
 
         yield self.create_text_message(result_str)
-
-    @staticmethod
-    def generate_random_number(digits: int, lower_num: float, upper_num: float) -> str:
-        if digits == 0:
-            random_num = random.randint(int(lower_num), int(upper_num))
-        else:
-            random_num = round(random.uniform(lower_num, upper_num), digits)
-
-        return str(random_num)
