@@ -27,7 +27,7 @@ A Dify plugin to generate random number, string, UUID, prime number and etc.
 - Output: If the digits is set to 0, an integer will be generated.
 
   <img src="./_assets/img1.png" width="400px" >
-  
+
   <img src="./_assets/img2.png" width="400px" >
 
 ### Random Prime Number:
@@ -37,8 +37,6 @@ A Dify plugin to generate random number, string, UUID, prime number and etc.
 
 ### Random UUID:
 
-- Generate a random string of UUID v4.
+- Generate a random string of [UUID v4](https://docs.python.org/3/library/uuid.html#uuid.uuid4).
 
 <img src="./_assets/img3.png" width="400px" >
-
-
