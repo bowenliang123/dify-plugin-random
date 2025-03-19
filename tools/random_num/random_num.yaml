@@ -48,7 +48,7 @@ parameters:
     form: llm
   - name: num_count
     type: number
-    required: false
+    required: true
     default: 1
     label:
       en_US: Number of random numbers

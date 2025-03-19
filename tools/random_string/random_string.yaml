@@ -94,7 +94,7 @@ parameters:
     form: form
   - name: string_count
     type: number
-    required: false
+    required: true
     default: "1"
     label:
       en_US: Number of random strings

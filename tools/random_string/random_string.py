@@ -9,16 +9,16 @@ from dify_plugin.entities.tool import ToolInvokeMessage
 
 class RandomStringTool(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
-        length = int(tool_parameters.get("length", 0))
+        length = int(tool_parameters.get("length") or 0)
         if not length or length <= 0:
             yield self.create_text_message("")
             return
 
-        include_alphabets = tool_parameters.get("include_alphabets", "upper_and_lower")
-        include_numbers = tool_parameters.get("include_numbers", "true")
-        include_punctuation = tool_parameters.get("include_punctuation", "false")
-        string_count = int(tool_parameters.get("string_count", 1))
-        separator = tool_parameters.get("separator", ",")
+        include_alphabets = tool_parameters.get("include_alphabets") or "upper_and_lower"
+        include_numbers = tool_parameters.get("include_numbers") or "true"
+        include_punctuation = tool_parameters.get("include_punctuation") or "false"
+        string_count = int(tool_parameters.get("string_count") or 1)
+        separator = tool_parameters.get("separator") or ","
 
         # Determine all available characters
         chars: str = (self.append_alphabets(include_alphabets)

@@ -8,11 +8,11 @@ from dify_plugin.entities.tool import ToolInvokeMessage
 
 class RandomNumTool(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
-        lower_bound = tool_parameters.get("lower_bound", 0)
-        upper_bound = tool_parameters.get("upper_bound", 100)
-        digits = int(tool_parameters.get("digits", 0))
-        num_count = int(tool_parameters.get("num_count", 1))
-        separator = tool_parameters.get("separator", ",")
+        lower_bound = tool_parameters.get("lower_bound") or 1
+        upper_bound = tool_parameters.get("upper_bound") or 100
+        digits = int(tool_parameters.get("digits") or 0)
+        num_count = int(tool_parameters.get("num_count") or 1)
+        separator = tool_parameters.get("separator") or ","
 
         if num_count == 0:
             yield self.create_text_message("")
