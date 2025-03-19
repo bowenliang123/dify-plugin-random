@@ -14,10 +14,12 @@ A Dify plugin to generate random number, string, UUID, prime number and etc.
 
 - Generate a random string with given length from alphabets and numbers.
 - Input parameters:
-  - `include_alphabets`: Include alphabets from both, either or none of uppercase or lowercase alphabets.
-  - `include_numbers`: Whether to include numbers
-  - `include_punctuation`: Whether to include punctuation characters from `!"#$%&'()*+,-./:;<=>?@[\]^_``{|}~`
-- Output: eg. `TSUWUBoOIu4bZja7mdjTkKteaKVrhz` in length 30.
+    - `include_alphabets`: Include alphabets from both, either or none
+      of [uppercase](https://docs.python.org/3/library/string.html#string.ascii_uppercase)
+      or [lowercase](https://docs.python.org/3/library/string.html#string.ascii_lowercase) alphabets.
+    - `include_numbers`: Whether to include [numbers](https://docs.python.org/3/library/string.html#string.digits)
+    - `include_punctuation`: Whether to include punctuation characters from `!"#$%&'()*+,-./:;<=>?@[\]^_``{|}~`
+- Output: eg. `TSUWUBoOIu4bZja7mdjTkKteaKVrhz` for requested length of 30.
 
 ### Random Number:
 
