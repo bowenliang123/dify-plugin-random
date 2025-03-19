@@ -28,16 +28,16 @@ parameters:
     options:
       - value: "upper_and_lower"
         label:
-          en_US: "Upper and lower case"
-          zh_Hans: 大写和小写字母
+          en_US: "Upper and lower case (a-zA-Z)"
+          zh_Hans: 大写和小写英文字母 (a-zA-Z)
       - value: "uppercase_only"
         label:
-          en_US: "Uppercase only"
-          zh_Hans: 仅大写字母
+          en_US: "Uppercase only (A-Z)"
+          zh_Hans: 仅大写英文字母 (A-Z)
       - value: "lowercase_only"
         label:
-          en_US: "Lowercase only"
-          zh_Hans: 仅小写字母
+          en_US: "Lowercase only (a-z)"
+          zh_Hans: 仅小写英文字母 (a-z)
       - value: "not_included"
         label:
           en_US: "Not included"
@@ -67,8 +67,8 @@ parameters:
       en_US: Whether include numbers
       zh_Hans: 是否包含数字
     human_description:
-      en_US: Whether include numbers, default to Yes
-      zh_Hans: 是否包含数字, 默认为是
+      en_US: Whether include numbers (0-9), default to Yes
+      zh_Hans: 是否包含数字（0-9）, 默认为是
     llm_description: Whether include numbers
     form: form
   - name: include_punctuation
@@ -88,9 +88,9 @@ parameters:
       en_US: Include punctuation
       zh_Hans: 是否包含特殊字符
     human_description:
-      en_US: Whether include punctuation,default to false, punctuation chars are !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
-      zh_Hans: 是否包含特殊字符，默认为否，特殊字符为 !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
-    llm_description: Whether include numbers
+      en_US: Default to false. Punctuation chars are !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+      zh_Hans: 默认为否。特殊字符为 !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+    llm_description: Whether include punctuation symbol characters
     form: form
   - name: string_count
     type: number
