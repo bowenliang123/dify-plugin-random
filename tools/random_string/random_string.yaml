@@ -92,6 +92,17 @@ parameters:
       zh_Hans: 是否包含特殊字符，默认为否，特殊字符为 !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
     llm_description: Whether include numbers
     form: form
+  - name: string_count
+    type: number
+    required: false
+    default: "1"
+    label:
+      en_US: Number of random strings
+      zh_Hans: 生成的个数
+    human_description:
+      en_US: Default to 1
+      zh_Hans: 默认为1
+    llm_description: Number of random strings to generate, default to 1
 extra:
   python:
     source: tools/random_string/random_string.py

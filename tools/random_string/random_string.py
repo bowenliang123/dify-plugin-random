@@ -15,15 +15,26 @@ class RandomStringTool(Tool):
             return
 
         include_alphabets = tool_parameters.get("include_alphabets", "upper_and_lower")
-        include_numbers = tool_parameters.get("include_numbers", "true").lower()
-        include_punctuation = tool_parameters.get("include_punctuation", "false").lower()
+        include_numbers = tool_parameters.get("include_numbers", "true")
+        include_punctuation = tool_parameters.get("include_punctuation", "false")
+        num_count = int(tool_parameters.get("num_count", 1))
+        separator = tool_parameters.get("separator", ", ")
 
-        characters = (self.append_alphabets(include_alphabets)
+        # Determine all available characters
+        chars: str = (self.append_alphabets(include_alphabets)
                       + self.append_numbers(include_numbers)
                       + self.append_punctuation(include_punctuation))
+        if not chars:
+            raise ValueError("No available character included.")
 
-        random_string = ''.join(random.choice(characters) for _ in range(length))
-        yield self.create_text_message(random_string)
+        # Generate random string(s)
+        result_str = separator.join(self.generate_random_string(chars, length) for _ in range(num_count))
+
+        yield self.create_text_message(result_str)
+
+    @staticmethod
+    def generate_random_string(characters: str, length: int) -> str:
+        return ''.join(random.choice(characters) for _ in range(length))
 
     @staticmethod
     def append_alphabets(include_alphabets: str) -> str:
@@ -41,7 +52,7 @@ class RandomStringTool(Tool):
 
     @staticmethod
     def append_numbers(include_numbers: str) -> str:
-        match include_numbers:
+        match include_numbers.lower():
             case "true":
                 return string.digits
             case _:
@@ -49,7 +60,7 @@ class RandomStringTool(Tool):
 
     @staticmethod
     def append_punctuation(include_punctuation: str) -> str:
-        match include_punctuation:
+        match include_punctuation.lower():
             case "true":
                 return string.punctuation
             case _:
