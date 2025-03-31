@@ -35,8 +35,9 @@ class RandomNumTool(Tool):
             raise ValueError(f"Invalid digits {digits}")
 
         # Generate random number(s)
-        gen_random_int = lambda lower, upper: random.randint(lower, upper)
-        gen_random_float = lambda lower, upper: round(random.uniform(lower, upper), digits)
+        system_random = random.SystemRandom()
+        gen_random_int = lambda lower, upper: system_random.randint(lower, upper)
+        gen_random_float = lambda lower, upper: round(system_random.uniform(lower, upper), digits)
         gen_func = gen_random_int if digits == 0 else gen_random_float
         result_str = separator.join(str(gen_func(lower_num, upper_num)) for _ in range(num_count))
 
