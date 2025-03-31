@@ -1,4 +1,4 @@
-import random
+import secrets
 import string
 from collections.abc import Generator
 from typing import Any
@@ -38,7 +38,7 @@ class RandomStringTool(Tool):
 
     @staticmethod
     def generate_random_string(characters: str, length: int) -> str:
-        return ''.join(random.choice(characters) for _ in range(length))
+        return ''.join(secrets.choice(characters) for _ in range(length))
 
     @staticmethod
     def append_alphabets(include_alphabets: str) -> str:
