@@ -4,9 +4,11 @@
 
 **Github Repository:** https://github.com/bowenliang123/random
 
+**Dify Marketplace:** https://marketplace.dify.ai/plugins/bowenliang123/random
+
 ## Description
 
-A Dify plugin to generate random number, string, UUID, prime number and etc.
+A Dify plugin to generate random number, string, UUID, prime number etc.
 
 ## Tools
 
