@@ -18,7 +18,8 @@ A Dify plugin to generate random number, string, UUID, prime number and etc.
     - `include_numbers`: Whether to include [numbers](https://docs.python.org/3/library/string.html#string.digits)
     - `include_punctuation`: Whether to include punctuation characters from `!"#$%&'()*+,-./:;<=>?@[\]^_``{|}~`
     - `string_count`: Number of random strings to generate
-- Output: eg. `TSUWUBoOIu4bZja7mdjTkKteaKVrhz` for requested length of 30.
+- Output: 
+    - eg. `TSUWUBoOIu4bZja7mdjTkKteaKVrhz` for requested length of 30.
 
 ### Random Number:
 
