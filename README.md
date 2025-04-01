@@ -2,7 +2,7 @@
 
 **Author:** [bowenliang123](https://github.com/bowenliang123)
 
-**Github Repo:** https://github.com/bowenliang123/random
+**Github Repository:** https://github.com/bowenliang123/random
 
 ## Description
 
@@ -14,9 +14,7 @@ A Dify plugin to generate random number, string, UUID, prime number and etc.
 
 - Generate a random string with given length from alphabets and numbers.
 - Input parameters:
-    - `include_alphabets`: Include alphabets from both, either or none
-      of [uppercase](https://docs.python.org/3/library/string.html#string.ascii_uppercase)
-      or [lowercase](https://docs.python.org/3/library/string.html#string.ascii_lowercase) alphabets.
+    - `include_alphabets`: Include alphabets from both, either or none of [uppercase](https://docs.python.org/3/library/string.html#string.ascii_uppercase) or [lowercase](https://docs.python.org/3/library/string.html#string.ascii_lowercase) alphabets.
     - `include_numbers`: Whether to include [numbers](https://docs.python.org/3/library/string.html#string.digits)
     - `include_punctuation`: Whether to include punctuation characters from `!"#$%&'()*+,-./:;<=>?@[\]^_``{|}~`
     - `string_count`: Number of random strings to generate
@@ -28,11 +26,12 @@ A Dify plugin to generate random number, string, UUID, prime number and etc.
 - Input:
     - `lower_bound` and `upper_bound`: The range of random number to generate. Either integer or float is accepted.
     - `num_count`: Number of random numbers to generate
-- Output: If the digits is set to 0, an integer will be generated.
+- Output: 
+    - If the digits is set to 0, an integer will be generated.
 
-  <img src="./_assets/img1.png" width="400px" >
+    ![](_assets/img1.png)
 
-  <img src="./_assets/img2.png" width="400px" >
+    ![](_assets/img2.png)
 
 ### Random Prime Number:
 
@@ -46,4 +45,23 @@ A Dify plugin to generate random number, string, UUID, prime number and etc.
 
 - Generate a random string of [UUID v4](https://docs.python.org/3/library/uuid.html#uuid.uuid4).
 
-<img src="./_assets/img3.png" width="400px" >
+    ![](_assets/img3.png)
+
+## Changelog
+
+- 0.1.0
+  - change the random generation from `random` to `secrets` for better randomness and security
+  - fix decimal generation with digits guaranteed incase of digits greater than 15
+- 0.0.3
+  - support generating multiple random numbers
+- 0.0.1
+  - introducing tools for random number, prime number and UUID v4 generation
+
+## License
+- Apache License 2.0
+
+## Privacy
+
+This plugin collects no data.
+
+All the random object generation are completed locally. NO data is transmitted to third-party services.
