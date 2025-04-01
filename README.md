@@ -54,7 +54,7 @@ A Dify plugin to generate random number, string, UUID, prime number etc.
 
 - 0.1.0
   - change the random generation from `random` to `secrets` for better randomness and security
-  - fix decimal generation with digits guaranteed incase of digits greater than 15
+  - fix decimal generation with digits guaranteed incase of digits greater than 17
 - 0.0.3
   - support generating multiple random numbers
 - 0.0.1
