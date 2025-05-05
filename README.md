@@ -1,8 +1,8 @@
-# Random - Generator for random number and string
+# Random - Generating random numbers and strings
 
 **Author:** [bowenliang123](https://github.com/bowenliang123)
 
-**Github Repository:** https://github.com/bowenliang123/random
+**Github Repository:** https://github.com/bowenliang123/dify-plugin-random
 
 **Dify Marketplace:** https://marketplace.dify.ai/plugins/bowenliang123/random
 
