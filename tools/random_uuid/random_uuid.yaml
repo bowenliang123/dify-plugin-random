@@ -10,10 +10,10 @@ description:
     zh_Hans: 生成一个随机UUID字符串，支持V4、V6、V7或V8版本, 根据RFC 9562标准。
   llm: Generate a random UUID.
 parameters:
-  - name: request_method
+  - name: uuid_version
     type: select
     required: true
-    default: "uuid4"
+    default: "uuid7"
     options:
       - value: "uuid4"
         label:

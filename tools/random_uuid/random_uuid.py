@@ -9,18 +9,18 @@ from dify_plugin.entities.tool import ToolInvokeMessage
 
 class RandomUUIDTool(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
-        uuid_type = tool_parameters.get("uuid_type", "uuid4")
-        uuid_str = self.generate_uuid(uuid_type)
+        uuid_version = tool_parameters.get("uuid_version", "uuid4")
+        uuid_str = self.generate_uuid(uuid_version)
         yield self.create_text_message(uuid_str)
 
-    def generate_uuid(self, uuid_type: str) -> str:
+    def generate_uuid(self, uuid_version: str) -> str:
         """
         Generate a random UUID string
         :param uuid_type:
         :return:
         """
         uid = None
-        match uuid_type:
+        match uuid_version:
             case "uuid4":
                 uid = uuid4()
             case "uuid6":
@@ -30,6 +30,6 @@ class RandomUUIDTool(Tool):
             case "uuid8":
                 uid = uuid8()
             case _:
-                raise ValueError(f"Invalid uuid_type {uuid_type}")
+                raise ValueError(f"Invalid UUID version {uuid_version}")
 
         return str(uid)
