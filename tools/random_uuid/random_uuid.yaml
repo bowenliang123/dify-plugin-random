@@ -2,12 +2,39 @@ identity:
   name: random_uuid
   author: bowenliang123
   label:
-    en_US: Random UUID
-    zh_Hans: 生成随机UUID
+    en_US: Random UUID string
+    zh_Hans: 随机UUID字符串
 description:
   human:
-    en_US: Generate a random UUID.
+    en_US: Generate a random UUID string of V4, V6, V7 or V8, according to RFC 9562.
+    zh_Hans: 生成一个随机UUID字符串，支持V4、V6、V7或V8版本, 根据RFC 9562标准。
   llm: Generate a random UUID.
+parameters:
+  - name: request_method
+    type: select
+    required: true
+    default: "uuid4"
+    options:
+      - value: "uuid4"
+        label:
+          en_US: "UUIDv4"
+      - value: "uuid6"
+        label:
+          en_US: "UUIDv6"
+      - value: "uuid7"
+        label:
+          en_US: "UUIDv7"
+      - value: "uuid8"
+        label:
+          en_US: "UUIDv8"
+    label:
+      en_US: UUID version
+      zh_Hans: UUID 版本
+    human_description:
+      en_US: UUID version
+      zh_Hans: UUID 版本
+    llm_description: UUID version, default to uuid4, available options are uuid4, uuid6, uuid7, uuid8.
+    form: form
 extra:
   python:
     source: tools/random_uuid/random_uuid.py

@@ -52,11 +52,16 @@ A Dify plugin to generate random number, string, UUID, prime number etc.
 
 ## Changelog
 
+- 1.0.0
+  - Support multiple UUID versions of V4, V6, V7 and V8 in `random_uuid` tool according to [RFC 9562](https://datatracker.ietf.org/doc/html/rfc9562.html#name-uuid-layouts).
+
 - 0.1.0
-  - change the random generation from `random` to `secrets` for better randomness and security
+  - change the random generation from `random` to `secrets` for bett(er randomness and security
   - fix decimal generation with digits guaranteed incase of digits greater than 17
+
 - 0.0.3
   - support generating multiple random numbers
+
 - 0.0.1
   - introducing tools for random number, prime number and UUID v4 generation
 
