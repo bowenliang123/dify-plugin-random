@@ -46,7 +46,7 @@ A Dify plugin to generate random number, string, UUID, prime number etc.
 
 ### Random UUID:
 
-- Generate a random string of [UUID v4](https://docs.python.org/3/library/uuid.html#uuid.uuid4).
+- Generate a random UUID string in UUID versions of V4, V6, V7 or V8 according to [RFC 9562](https://datatracker.ietf.org/doc/html/rfc9562.html#name-uuid-layouts).
 
     ![](_assets/img3.png)
 
