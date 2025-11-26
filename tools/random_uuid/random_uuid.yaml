@@ -13,18 +13,18 @@ parameters:
   - name: uuid_version
     type: select
     required: true
-    default: "uuid7"
+    default: "v4"
     options:
-      - value: "uuid4"
+      - value: "v4"
         label:
           en_US: "UUIDv4"
-      - value: "uuid6"
+      - value: "v6"
         label:
           en_US: "UUIDv6"
-      - value: "uuid7"
+      - value: "v7"
         label:
           en_US: "UUIDv7"
-      - value: "uuid8"
+      - value: "v8"
         label:
           en_US: "UUIDv8"
     label:

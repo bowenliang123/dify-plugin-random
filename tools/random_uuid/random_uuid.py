@@ -21,13 +21,13 @@ class RandomUUIDTool(Tool):
         """
         uid = None
         match uuid_version:
-            case "uuid4":
+            case "v4":
                 uid = uuid4()
-            case "uuid6":
+            case "v6":
                 uid = uuid6()
-            case "uuid7":
+            case "v7":
                 uid = uuid7()
-            case "uuid8":
+            case "v8":
                 uid = uuid8()
             case _:
                 raise ValueError(f"Invalid UUID version {uuid_version}")
