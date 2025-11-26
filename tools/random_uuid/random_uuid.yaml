@@ -17,16 +17,20 @@ parameters:
     options:
       - value: "v4"
         label:
-          en_US: "UUIDv4"
+          en_US: "Version 4 (cryptographically-secure)"
+          zh_Hans: "版本 4 (加密安全)"
       - value: "v6"
         label:
-          en_US: "UUIDv6"
+          en_US: "Version 6 (time-based prefix)"
+          zh_Hans: "版本 6 (基于时间戳的前缀)"
       - value: "v7"
         label:
-          en_US: "UUIDv7"
+          en_US: "Version 7 (time-based prefix)"
+          zh_Hans: "版本 7 (基于时间戳的前缀)"
       - value: "v8"
         label:
-          en_US: "UUIDv8"
+          en_US: "Version 8 (pseudo-random)"
+          zh_Hans: "版本 8 (基于伪随机策略)"
     label:
       en_US: UUID version
       zh_Hans: UUID 版本
