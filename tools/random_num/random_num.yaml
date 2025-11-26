@@ -2,12 +2,12 @@ identity:
   name: random_num
   author: bowenliang123
   label:
-    en_US: Random number(s)
-    zh_Hans: 生成随机数
+    en_US: Random Number(s)
+    zh_Hans: 随机数（整数或浮点数)
 description:
   human:
-    en_US: Generate random number(s).
-    zh_Hans: 生成随机数
+    en_US: Generate one or multiple random number(s) of integer or floats with given range.
+    zh_Hans: 指定范围内生成一个或多个随机数，支持整数和浮点数。
   llm: Generate random number(s).
 parameters:
   - name: lower_bound

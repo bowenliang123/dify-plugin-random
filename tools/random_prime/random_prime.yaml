@@ -2,12 +2,12 @@ identity:
   name: random_prime
   author: bowenliang123
   label:
-    en_US: Random prime number
-    zh_Hans: 生成随机质数
+    en_US: Random Prime Number
+    zh_Hans: 随机质数
 description:
   human:
-    en_US: Generate a random prime number.
-    zh_Hans: 生成一个随机质数。
+    en_US: Generate a random prime number with given range.
+    zh_Hans: 生成一个指定范围内的随机质数。
   llm: Generate a random prime number.
 parameters:
   - name: lower_bound

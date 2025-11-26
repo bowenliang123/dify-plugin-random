@@ -3,7 +3,7 @@ identity:
   author: bowenliang123
   label:
     en_US: Random String
-    zh_Hans: 生成随机字符串
+    zh_Hans: 随机字符串
 description:
   human:
     en_US: Generate one or several random string with given length from alphabets, numbers or punctuation.

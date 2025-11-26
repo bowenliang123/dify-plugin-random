@@ -2,12 +2,12 @@ identity:
   name: random_uuid
   author: bowenliang123
   label:
-    en_US: Random UUID string
-    zh_Hans: 随机UUID字符串
+    en_US: Random UUID
+    zh_Hans: 随机UUID
 description:
   human:
     en_US: Generate a random UUID string of V4, V6, V7 or V8, according to RFC 9562.
-    zh_Hans: 生成一个随机UUID字符串，支持V4、V6、V7或V8版本, 根据RFC 9562标准。
+    zh_Hans: 生成一个随机UUID字符串，支持V4、V6、V7或V8版本, 符合RFC 9562标准。
   llm: Generate a random UUID string of V4, V6, V7 or V8.
 parameters:
   - name: uuid_version
