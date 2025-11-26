@@ -12,12 +12,12 @@ from tools.random_uuid.random_uuid import RandomUUIDTool
 class RandomProvider(ToolProvider):
     def _validate_credentials(self, credentials: dict[str, Any]) -> None:
         try:
-            """
-            IMPLEMENT YOUR VALIDATION HERE
-            """
-            RandomNumTool.from_credentials({})
-            RandomStringTool.from_credentials({})
-            RandomUUIDTool.from_credentials({})
-            RandomPrimeTool.from_credentials({})
+            for t in [
+                RandomNumTool,
+                RandomStringTool,
+                RandomUUIDTool,
+                RandomPrimeTool,
+            ]:
+                t.from_credentials({})
         except Exception as e:
             raise ToolProviderCredentialValidationError(str(e))
