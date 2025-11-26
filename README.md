@@ -48,6 +48,8 @@ A Dify plugin to generate random number, string, UUID, prime number etc.
 
 - Generate a random UUID string in UUID versions of V4, V6, V7 or V8 according to [RFC 9562](https://datatracker.ietf.org/doc/html/rfc9562.html#name-uuid-layouts).
 
+    ![](_assets/img4.png)
+
     ![](_assets/img3.png)
 
 ## Changelog
