@@ -7,6 +7,7 @@ identity:
 description:
   human:
     en_US: Generate a random prime number.
+    zh_Hans: 生成一个随机质数。
   llm: Generate a random prime number.
 parameters:
   - name: lower_bound
