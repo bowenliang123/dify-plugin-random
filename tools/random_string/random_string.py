@@ -42,7 +42,7 @@ class RandomStringTool(Tool):
 
     @staticmethod
     def append_alphabets(include_alphabets: str) -> str:
-        match include_alphabets:
+        match include_alphabets.lower():
             case "upper_and_lower":
                 return string.ascii_letters
             case "uppercase_only":

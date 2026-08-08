@@ -9,7 +9,7 @@ from dify_plugin.entities.tool import ToolInvokeMessage
 
 class RandomUUIDTool(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
-        uuid_version = tool_parameters.get("uuid_version", "uuid4")
+        uuid_version = tool_parameters.get("uuid_version", "v4")
         uuid_str = self.generate_uuid(uuid_version)
         yield self.create_text_message(uuid_str)
 

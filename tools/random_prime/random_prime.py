@@ -11,9 +11,9 @@ class RandomPrimeTool(Tool):
         lower_bound = tool_parameters.get("lower_bound")
         upper_bound = tool_parameters.get("upper_bound")
 
-        if not lower_bound:
+        if lower_bound is None:
             raise ValueError("Invalid input lower_bound")
-        if not upper_bound:
+        if upper_bound is None:
             raise ValueError("Invalid input upper_bound")
 
         lower_num = int(lower_bound)
