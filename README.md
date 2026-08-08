@@ -54,6 +54,9 @@ A Dify plugin to generate random number, string, UUID, prime number etc.
 
 ## Changelog
 
+- 1.1.0
+  - Upgrade dify-plugin SDK to 0.10.1
+
 - 1.0.0
   - Support multiple UUID versions of V4, V6, V7 and V8 in `random_uuid` tool according to [RFC 9562](https://datatracker.ietf.org/doc/html/rfc9562.html#name-uuid-layouts).
 
